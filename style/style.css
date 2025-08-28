@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #252525;
+  color: #ccc;
+}
+.container {
+  width: 95%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background-color: #0f0f0f;
+  align-items: center;
+
+  > .title {
+    width: 80%;
+    text-align: center;
+    margin: 50px;
+    font-size: 30px;
+    transition: 1s;
+    &:hover {
+      color: #d32f2f;
+      transform: scale(0.9);
+    }
+  }
+  > .logo {
+    width: 20%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    > figure {
+      width: 150px;
+      height: 150px;
+
+      > img {
+        align-items: center;
+        width: 100%;
+        object-fit: cover;
+        transition: 1s;
+        &:hover {
+          scale: 0.9;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #d32f2f;
+  padding: 0 50px;
+
+  > * {
+    height: 100%;
+  }
+  > form {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    > input[type="text"] {
+      width: 100%;
+      height: 50px;
+      border-radius: 50px;
+      outline: none;
+      border: none;
+      background-color: #0f0f0f;
+      color: #d32f2f;
+      font-size: 25px;
+      padding-left: 20px;
+    }
+    > input[type="submit"] {
+      display: none;
+    }
+    > label {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  > nav {
+    width: 70%;
+    > ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      > li {
+        width: auto;
+        height: 100%;
+        min-width: 50px;
+        z-index: 1;
+        position: relative;
+        > a {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+          font-size: 20px;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: #ccc;
+          > div {
+            width: 100%;
+            height: 100%;
+            margin: 0px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            > .icon {
+              width: 100%;
+              > svg {
+                width: 50px;
+                transition: 1s;
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          > ul {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        > ul {
+          width: 700px;
+          height: 400px;
+          position: absolute;
+          top: 100px;
+          left: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: 1s;
+          > li {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            height: 100%;
+            background-color: #ab2828;
+            background-image: url(/assets/img/phantom_lancer.webp);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: auto 75%;
+            > ul {
+              width: 30%;
+              /* border: 2px solid yellow; */
+              /* background-color: yellow; */
+              > li {
+                width: 200px;
+                height: 100px;
+                padding-left: 10px;
+                transition: 1s;
+                &:hover {
+                  background-color: #0f0f0f;
+                }
+                > a {
+                  width: 170px;
+                  display: flex;
+                  text-decoration: none;
+                  /* justify-content: space-between; */
+                  gap: 10px;
+                  align-items: center;
+                  padding: 20px 0;
+                  color: #ccc;
+                }
+              }
+            }
+          }
+        }
+        transition: 0.8s;
+        &:hover {
+          background-color: #0f0f0f34;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  > div {
+    &:first-of-type {
+      display: flex;
+      width: 20%;
+      > aside {
+        width: 100%;
+        height: 300px;
+        position: sticky;
+        top: 0;
+        /* bottom: 1000px; */
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+
+        > h2 {
+          text-align: center;
+          color: #d32f2f;
+          font-size: 40px;
+          transition: 1s ease-in-out;
+        }
+        > p {
+          line-height: 2;
+          font-size: 16px;
+          transition: 1s ease-in-out;
+        }
+        > .corp {
+          display: flex;
+          > img {
+            width: 100px;
+            padding: 10px;
+            object-fit: contain;
+          }
+        }
+        &:hover {
+          > * {
+            transition: 1s ease-in-out;
+          }
+          > p {
+            color: #d32f2f;
+          }
+          > h2 {
+            color: #ccc;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      width: 80%;
+    }
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    > * {
+      transition: 1s;
+    }
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: center;
+    margin: 20px;
+
+    &:hover {
+      background-color: #0f0f0f91;
+      transition: 1s;
+      > .caption {
+        opacity: 1;
+        transition: 1s;
+        background-color: #0f0f0fc5;
+      }
+    }
+
+    > .photo {
+      > img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    > .caption {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      transition: 1s;
+      position: absolute;
+      bottom: 0;
+      padding: 5px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      font-size: 18px;
+      > h2 {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: #0f0f0f;
+  display: flex;
+  overflow: hidden;
+  > .team-card {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+    > .team-title {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > h2 {
+        margin-top: 10px;
+        font-size: 50px;
+      }
+    }
+    > .team-logo {
+      width: 952px;
+      height: 230px;
+      display: flex;
+      flex-flow: nowrap row;
+      justify-content: center;
+      align-items: center;
+      > div {
+        flex-basis: 50px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        transition: 1s;
+        overflow: hidden;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: center;
+        align-items: center;
+        > img {
+          width: 100%;
+        }
+        &:hover {
+          flex-grow: 3;
+        }
+      }
+    }
+  }
+  > .profile {
+    display: flex;
+    width: 50%;
+    > figure {
+      display: flex;
+      width: 250px;
+      margin-left: 20px;
+      align-items: center;
+      > img {
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
+        z-index: 2;
+      }
+      > .social {
+        > div {
+          width: 50px;
+          height: 50px;
+          border: 2px solid #ccc;
+          border-radius: 100%;
+          position: relative;
+          left: -100px;
+          background-color: #ccc;
+          margin: 15px;
+          transition: 1s;
+          z-index: 1;
+          > a {
+            width: 50px;
+            height: 50px;
+            > img {
+              width: 100%;
+              border-radius: 100%;
+            }
+          }
+        }
+      }
+      &:hover {
+        > .social {
+          > .linkedin {
+            transform: translate(50px, -50px);
+            transition: 1s;
+          }
+          > .github {
+            transform: translate(90px);
+            transition: 2s;
+          }
+          > .telegram {
+            transform: translate(50px, 50px);
+            transition: 3s;
+          }
+        }
+      }
+    }
+    > .about {
+      width: 100%;
+      margin: 20px 100px;
+      > p {
+        line-height: 2;
+        font-size: 18px;
+      }
+    }
+  }
+}
