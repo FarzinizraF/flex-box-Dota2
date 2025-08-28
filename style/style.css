@@ -167,7 +167,7 @@ header {
             width: 100%;
             height: 100%;
             background-color: #ab2828;
-            background-image: url(/assets/img/phantom_lancer.webp);
+            background-image: url(assets/img/phantom_lancer.webp);
             background-position: right bottom;
             background-repeat: no-repeat;
             background-size: auto 75%;
@@ -428,3 +428,4 @@ footer {
     }
   }
 }
+
